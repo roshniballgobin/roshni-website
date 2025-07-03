@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Blog | Roshni Ballgobin</title>
   <style>
     :root {
@@ -10,47 +10,51 @@
       --primary: #dceaf6;
       --accent: #cbd7e6;
       --text: #333;
-      --font: 'Segoe UI', sans-serif;
+      --font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
     body {
+      margin: 0;
       font-family: var(--font);
       background-color: var(--bg);
       color: var(--text);
-      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
 
     header {
       background-color: var(--primary);
+      padding: 1rem 2rem;
       text-align: center;
-      padding: 2rem;
       border-bottom: 2px solid var(--accent);
     }
 
     header h1 {
       margin: 0;
-      font-size: 2.5rem;
+      font-size: 2.8rem;
     }
 
     header p {
-      margin: 0.5rem 0 0;
+      margin-top: 0.3rem;
       font-style: italic;
       color: #555;
     }
 
     nav {
-      background: white;
       display: flex;
       justify-content: center;
-      gap: 2rem;
-      padding: 1rem;
+      background-color: white;
       border-bottom: 1px solid #ccc;
+      padding: 1rem;
+      gap: 2rem;
+      font-weight: 500;
     }
 
     nav a {
       text-decoration: none;
       color: #333;
-      font-weight: bold;
+      transition: color 0.3s ease;
     }
 
     nav a:hover {
@@ -58,38 +62,71 @@
     }
 
     main {
-      max-width: 800px;
-      margin: 2rem auto;
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-      padding: 2rem;
+      max-width: 900px;
+      margin: 3rem auto 4rem;
+      padding: 0 2rem;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+      animation: fadeIn 1.2s ease forwards;
+      opacity: 0;
     }
 
     article h2 {
-      margin-top: 0;
-      font-size: 2rem;
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+      color: #222;
+      text-align: center;
     }
 
     article p.date {
       color: #888;
       font-size: 0.9rem;
-      margin-top: -0.5rem;
+      margin-top: -0.3rem;
+      margin-bottom: 1.8rem;
+      text-align: center;
+      font-style: italic;
     }
 
     article p {
+      font-size: 1.15rem;
       line-height: 1.7;
-      margin-bottom: 1.5rem;
-      font-size: 1.05rem;
+      color: #444;
+      max-width: 720px;
+      margin: 0 auto 1.5rem;
+      text-align: justify;
     }
 
     footer {
       background-color: var(--accent);
       text-align: center;
       padding: 1rem;
-      margin-top: 3rem;
       font-size: 0.85rem;
       color: #444;
+      margin-top: auto;
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      main {
+        margin: 2rem 1rem 3rem;
+        padding: 1rem;
+      }
+
+      article h2 {
+        font-size: 1.6rem;
+      }
+
+      article p {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
@@ -103,8 +140,6 @@
   <nav>
     <a href="index.html">Home</a>
     <a href="blog.html">Blog</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
   </nav>
 
   <main>
