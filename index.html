@@ -1,186 +1,107 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Roshni Ballgobin</title>
+  <title>Raina's Blog</title>
   <style>
-    :root {
-      --bg: #f7f9fb;
-      --primary: #dceaf6;
-      --accent: #cbd7e6;
-      --text: #333;
-      --font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      --slide-height: 350px;
-    }
-
+    /* Pastel color palette */
     body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #fef6f9;
+      color: #5a4e7c;
       margin: 0;
-      font-family: var(--font);
-      background-color: var(--bg);
-      color: var(--text);
+      padding: 0;
     }
-
     header {
-      background-color: var(--primary);
-      padding: 1rem 2rem;
-      text-align: center;
-      border-bottom: 2px solid var(--accent);
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2.8rem;
-    }
-
-    header p {
-      margin-top: 0.3rem;
-      font-style: italic;
-      color: #555;
-    }
-
-    nav {
+      background-color: #f7d6e0;
+      padding: 15px 30px;
       display: flex;
-      justify-content: center;
-      background-color: white;
-      border-bottom: 1px solid #ccc;
-      padding: 1rem;
-      gap: 2rem;
-      font-weight: 500;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(90, 78, 124, 0.1);
     }
-
+    header h1 {
+      font-weight: 700;
+      font-size: 1.8rem;
+      letter-spacing: 2px;
+      margin: 0;
+    }
     nav a {
+      color: #5a4e7c;
       text-decoration: none;
-      color: #333;
+      font-weight: 600;
+      margin-left: 25px;
+      font-size: 1rem;
       transition: color 0.3s ease;
     }
-
     nav a:hover {
-      color: #0077aa;
+      color: #d67eb3;
     }
-
     main {
-      max-width: 900px;
-      margin: 3rem auto 5rem;
-      padding: 0 2rem;
-      background-color: white;
+      max-width: 750px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+    .post {
+      background: #f8e4f3;
       border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.07);
-      overflow: hidden;
+      padding: 20px;
+      margin-bottom: 25px;
+      box-shadow: 0 4px 8px rgba(214, 126, 179, 0.2);
+      transition: box-shadow 0.3s ease;
     }
-
-    /* Slideshow container */
-    .slideshow {
-      position: relative;
-      height: var(--slide-height);
-      border-radius: 10px 10px 0 0;
-      overflow: hidden;
-      margin-bottom: 2rem;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    .post:hover {
+      box-shadow: 0 6px 15px rgba(214, 126, 179, 0.35);
     }
-
-    /* Slides */
-    .slide {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      opacity: 0;
-      transition: opacity 1.5s ease-in-out;
-      background-size: cover;
-      background-position: center;
-      border-radius: 10px 10px 0 0;
+    .post h2 {
+      margin-top: 0;
+      color: #6d517a;
     }
-
-    .slide.active {
-      opacity: 1;
-      z-index: 2;
+    .post p {
+      line-height: 1.6;
+      color: #4a3c57;
     }
-
-    main h2 {
-      font-size: 2.2rem;
-      margin-bottom: 1rem;
-      text-align: center;
-      color: #222;
-    }
-
-    main p {
-      font-size: 1.15rem;
-      line-height: 1.7;
-      color: #444;
-      max-width: 700px;
-      margin: 0 auto;
-      text-align: center;
-      padding: 0 1rem;
-    }
-
     footer {
-      background-color: var(--accent);
       text-align: center;
-      padding: 1rem;
-      font-size: 0.85rem;
-      color: #444;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-    }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2rem;
-      }
-
-      main h2 {
-        font-size: 1.6rem;
-      }
-
-      main p {
-        font-size: 1rem;
-      }
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #9e8ca3;
+      background: #f7d6e0;
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Roshni Ballgobin</h1>
-    <p>“Precision. Purpose. Professionalism.”</p>
-  </header>
-
+<header>
+  <h1>Raina</h1>
   <nav>
-    <a href="index.html">Home</a>
-    <a href="blog.html">Blog</a>
+    <a href="#">Home</a>
+    <a href="#">Blog</a>
   </nav>
+</header>
 
-  <main>
-    <div class="slideshow">
-      <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=900&q=80');"></div>
-      <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80');"></div>
-      <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=900&q=80');"></div>
-    </div>
+<main>
+  <article class="post">
+    <h2>Welcome to My Blog</h2>
+    <p>This is a space where I share my thoughts, stories, and inspirations with a soft pastel vibe. Stay tuned for more posts!</p>
+  </article>
 
-    <h2>Welcome to My Space</h2>
-    <p>
-      This is the personal website of Roshni Ballgobin — a space for sharing insights, showcasing work, and writing about things that matter. Whether it's reflections, creativity, or professional thoughts, you’ll find them here.
-    </p>
-  </main>
+  <article class="post">
+    <h2>Pastel Aesthetic Inspirations</h2>
+    <p>Explore the calming and beautiful pastel color palettes that inspire creativity and peace in daily life.</p>
+  </article>
 
-  <footer>
-    &copy; 2025 Roshni Ballgobin. All rights reserved.
-  </footer>
+  <article class="post">
+    <h2>How to Keep Your Blog Feminine and Elegant</h2>
+    <p>Simple tips and tricks to maintain a feminine, minimalistic, and aesthetic blog style that feels warm and inviting.</p>
+  </article>
+</main>
 
-  <script>
-    const slides = document.querySelectorAll('.slide');
-    let currentIndex = 0;
-    const slideCount = slides.length;
-
-    function showNextSlide() {
-      slides[currentIndex].classList.remove('active');
-      currentIndex = (currentIndex + 1) % slideCount;
-      slides[currentIndex].classList.add('active');
-    }
-
-    setInterval(showNextSlide, 4000); // Change slide every 4 seconds
-  </script>
+<footer>
+  &copy; 2025 Raina's Blog. All rights reserved.
+</footer>
 
 </body>
 </html>
