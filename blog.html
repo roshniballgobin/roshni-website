@@ -50,3 +50,113 @@
     nav a {
       text-decoration: none;
       color: #333;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #0077aa;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 2rem auto;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      padding: 2rem;
+    }
+
+    article h2 {
+      margin-top: 0;
+      font-size: 2rem;
+    }
+
+    article p.date {
+      color: #888;
+      font-size: 0.9rem;
+      margin-top: -0.5rem;
+    }
+
+    article p {
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+      font-size: 1.05rem;
+    }
+
+    footer {
+      background-color: var(--accent);
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+      font-size: 0.85rem;
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Roshni's Blog</h1>
+    <p>Ideas. Stories. Reflections.</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="blog.html">Blog</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main>
+    <article>
+      <h2>My First Blog Post</h2>
+      <p class="date">Posted on July 3, 2025</p>
+      <p>
+        Welcome to my blog. This space is for everything — reflections, thoughts, rants, celebrations, and even quiet moments I want to share. Writing helps me process the world, and I hope it connects with you too.
+      </p>
+    </article>
+
+    <!-- DISQUS COMMENT SECTION -->
+    <div id="disqus_thread" style="margin-top: 3rem;"></div>
+    <script>
+      var disqus_config = function () {
+        this.page.url = window.location.href;
+        this.page.identifier = 'blog-post-1';
+      };
+
+      (function() {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://YOUR-SHORTNAME.disqus.com/embed.js'; // 🔁 Replace YOUR-SHORTNAME
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+  </main>
+
+  <footer>
+    &copy; 2025 Roshni Ballgobin. All rights reserved.
+  </footer>
+
+</body>
+</html>
+🔧 Next Steps
+To make the comment section work:
+Go to https://disqus.com
+
+Sign up and create a site
+
+Get your Disqus shortname (e.g., roshniblog)
+
+Replace this line:
+
+js
+Copy
+Edit
+s.src = 'https://YOUR-SHORTNAME.disqus.com/embed.js';
+With:
+
+js
+Copy
+Edit
+s.src = 'https://roshniblog.disqus.com/embed.js';
