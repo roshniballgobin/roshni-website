@@ -115,23 +115,6 @@
         Welcome to my blog. This space is for everything — reflections, thoughts, rants, celebrations, and even quiet moments I want to share. Writing helps me process the world, and I hope it connects with you too.
       </p>
     </article>
-
-    <!-- DISQUS COMMENT SECTION -->
-    <div id="disqus_thread" style="margin-top: 3rem;"></div>
-    <script>
-      var disqus_config = function () {
-        this.page.url = window.location.href;
-        this.page.identifier = 'blog-post-1';
-      };
-
-      (function() {
-        var d = document, s = d.createElement('script');
-        s.src = 'https://YOUR-SHORTNAME.disqus.com/embed.js'; // 🔁 Replace YOUR-SHORTNAME
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-      })();
-    </script>
-    <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
   </main>
 
   <footer>
@@ -140,23 +123,3 @@
 
 </body>
 </html>
-🔧 Next Steps
-To make the comment section work:
-Go to https://disqus.com
-
-Sign up and create a site
-
-Get your Disqus shortname (e.g., roshniblog)
-
-Replace this line:
-
-js
-Copy
-Edit
-s.src = 'https://YOUR-SHORTNAME.disqus.com/embed.js';
-With:
-
-js
-Copy
-Edit
-s.src = 'https://roshniblog.disqus.com/embed.js';
